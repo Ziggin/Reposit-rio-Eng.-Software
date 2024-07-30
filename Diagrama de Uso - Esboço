@@ -1,0 +1,29 @@
+@startuml
+!define RECTANGLE class
+
+actor Paciente
+actor Atendente
+actor Enfermeiro
+actor Medico_Plantonista
+
+    Atendente -- (Registrar Dados)
+    Atendente -- (Registrar Queixa)
+
+    Enfermeiro -- (Medir Pressão)
+    Enfermeiro -- (Medir Temperatura)
+
+    Medico_Plantonista -- (Identificar Problema)
+    Medico_Plantonista -- (Preencher Prontuário)
+    Medico_Plantonista -- (Encaminhar para Internação)
+
+Paciente -- (Receber Atendimento) : <<include>>
+(Receber Atendimento) --> (Registrar Dados)
+(Receber Atendimento) --> (Registrar Queixa)
+(Registrar Dados) --> (Medir Pressão)
+(Registrar Queixa) --> (Medir Temperatura)
+(Medir Pressão) --> (Identificar Problema)
+(Medir Temperatura) --> (Identificar Problema)
+(Identificar Problema) --> (Preencher Prontuário)
+(Preencher Prontuário) --> (Encaminhar para Internação)
+
+@enduml
