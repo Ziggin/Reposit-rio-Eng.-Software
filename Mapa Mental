@@ -1,0 +1,17 @@
+@startmindmap
+* <size:40><color:navy>Estudo de Caso do</color></size>\n<size:40><color:navy>Sistema Hospitalar</color></size>
+* <size:25><color:blue>Atendimento</color></size>
+-- <size:20><color:green>Recepção</color></size>
+--- <size:15><color:blue>Atendente</color></size>
+---- <size:15><color:orange>Registro de Dados</color></size>
+---- <size:15><color:orange>Registro da Queixa</color></size>
+** <size:20><color:green>Exames Iniciais</color></size>
+*** <size:15><color:blue>Enfermeiro</color></size>
+**** <size:15><color:orange>Medição de Pressão</color></size>
+**** <size:15><color:orange>Medição de Temperatura</color></size>
+** <size:20><color:green>Consulta Médica</color></size>
+*** <size:15><color:blue>Médico Plantonista</color></size>
+**** <size:15><color:orange>Identificação do Problema</color></size>
+**** <size:15><color:orange>Preenchimento do Prontuário</color></size>
+**** <size:15><color:orange>Encaminhamento para Internação</color></size>
+@endmindmap
