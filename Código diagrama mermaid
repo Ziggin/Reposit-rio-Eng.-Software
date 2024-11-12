@@ -1,0 +1,29 @@
+flowchart TB
+start((Início))
+
+%% Seções de João
+A1("João verifica atividades diárias")
+A2("Registra nova tarefa: Reunião com Cliente")
+A3{"Precisa ajustar prazos?"}
+
+A3 -- "Sim" --> A4("Ajustar data de uma entrega")
+A4 --> A5{"Concluir ou cancelar tarefas?"}
+A5 -- "Sim" --> A6("Marcar como Concluída/Cancelada")
+A5 -- "Não" --> A7("Manter tarefas atuais")
+
+A3 -- "Não" --> A7
+
+%% Seções de Mariana
+B1("Mariana: Novo colaborador")
+B2("Atualiza tabela de Gestão de Usuários")
+B3("Consulta métricas de atividades")
+B4{"Necessário ajustar visualização?"}
+
+B1 --> B2 --> B3 --> B4
+B4 -- "Sim" --> B5("Filtra por categoria")
+B4 -- "Não" --> end((Fim))
+
+start --> A1 --> A2 --> A3
+A7 --> B1
+A6 --> B1
+B5 --> end
